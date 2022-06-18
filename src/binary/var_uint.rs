@@ -27,6 +27,13 @@ pub struct VarUInt {
 }
 
 impl VarUInt {
+    pub(crate) fn new(value: usize, size_in_bytes: usize) -> Self {
+        VarUInt {
+            value,
+            size_in_bytes,
+        }
+    }
+
     /// Reads a VarUInt from the provided data source.
     pub fn read<R: IonDataSource>(data_source: &mut R) -> IonResult<VarUInt> {
         let mut magnitude: VarUIntStorage = 0;

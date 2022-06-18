@@ -6,13 +6,13 @@ use delegate::delegate;
 
 use crate::binary::constants::v1_0::IVM;
 use crate::constants::v1_0::system_symbol_ids;
+use crate::data_source::ToIonDataSource;
 use crate::raw_reader::{RawReader, RawStreamItem};
 use crate::raw_symbol_token::RawSymbolToken;
 use crate::result::{decoding_error, decoding_error_raw, IonResult};
 use crate::stream_reader::StreamReader;
 use crate::symbol::Symbol;
 use crate::symbol_table::SymbolTable;
-use crate::text::ion_data_source::ToIonDataSource;
 use crate::types::decimal::Decimal;
 use crate::types::integer::Integer;
 use crate::types::timestamp::Timestamp;
